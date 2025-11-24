@@ -1,0 +1,12 @@
+[Unit]
+Description=PaperMC Server
+After=network.target
+
+[Service]
+User=mc
+WorkingDirectory=/home/mc/server
+ExecStart=/usr/bin/java -Xms1G -Xmx2G -jar paper.jar nogui
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
