@@ -1,0 +1,30 @@
+openai_api_key: "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"
+model: "gpt-4o-mini"
+allow_function_calls: true
+ai_admin_enabled: true
+ai_admin_allowed_commands:
+  - kick
+  - ban
+  - mute
+  - tp
+  - time
+  - weather
+ai_admin_max_actions_per_minute: 5
+allowed_permission: "aiplugin.admin"
+summon_mobs_allowed: false
+ai_admin_whitelist_targets: [] # player names that AI may target for admin actions (empty = require explicit target in function and manual review)
+ai_admin_audit_log: true
+npcs:
+  librarian:
+    name: "Elyra the Archivist"
+    entity_type: "VILLAGER"
+    spawn:
+      world: "world"
+      x: 100
+      y: 65
+      z: -40
+    personality: "wise scholar who speaks calmly"
+    allow_actions: true
+    react_to_player_chat: true
+    proximity_trigger: 5
+npc_memory_size: 10 # per-npc recent messages to send as context
